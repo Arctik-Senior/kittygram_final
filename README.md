@@ -7,7 +7,7 @@
 Python 3.11.1,
 Django 3.2.3,
 djangorestframework==3.12.4, 
-PostgreSQL 13
+PostgreSQL 13.10
 
 ## Установка
 <i>Примечание: Все примеры указаны для Linux</i><br>
