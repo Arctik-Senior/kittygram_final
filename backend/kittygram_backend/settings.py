@@ -1,5 +1,4 @@
 import os
-from distutils.util import strtobool
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -10,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', default='token')
 
-DEBUG = bool(strtobool(os.getenv('DEBUG', 'False')))
+DEBUG = bool(os.getenv('DEBUG', 'False').lower())
 
 # сорри за комент, знаю что нужно ALLOWED_HOSTS держать в .env, но на серве бекенд никак не хочет работать
 # коменты потом удалю
