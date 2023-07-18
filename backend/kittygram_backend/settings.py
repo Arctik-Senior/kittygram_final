@@ -13,8 +13,8 @@ DEBUG = bool(os.getenv('DEBUG', 'False').lower())
 
 # сорри за комент, знаю что нужно ALLOWED_HOSTS держать в .env, но на серве бекенд никак не хочет работать
 # коменты потом удалю
-# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='127.0.0.1, localhost').split(', ')
-ALLOWED_HOSTS = ['meowkittygram.ddns.net', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', default='127.0.0.1, localhost').split(', ')
+# ALLOWED_HOSTS = ['meowkittygram.ddns.net', 'localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -67,7 +67,7 @@ DATABASES = {
         'USER': os.getenv('POSTGRES_USER', 'kittygram_user'),
         'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
         'HOST': os.getenv('DB_HOST', ''),
-        'DB_PORT': os.getenv('DB_PORT', '5432'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
 
